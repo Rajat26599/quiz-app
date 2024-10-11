@@ -9,20 +9,21 @@ const Question = (props) => {
     }
 
     return (
-        <QuestionWrapper>
+        <QuestionWrapper key={idx}>
             <h5>Question { idx+1 + '/' + questions.length}</h5>
             <h3>{questions[idx].question}</h3>
-            <Hr />
+            <Hr aria-hidden={true} />
             {
                 questions[idx].options.map((option, i) => (
                     <OptionWrapper
                         key={i} 
                         id={i}
                         onClick={() => onOptionClick(i)} 
-                        bgcolor={showAnswer ? '#fee' : checkedRadio===i ? '#feb4c1' : 'white'} 
+                        bgcolor={showAnswer ? (checkedRadio===i ? '#b6e7d2' : '#eee') : (checkedRadio===i ? '#b6e7d2' : 'white')} 
                         bordercolor={showAnswer ? (i===questions[idx].correctOption ? 'green' : 'red') : 'white'}
+                        disabled={showAnswer}
                         >
-                        <p>{option}</p>
+                        {option}
                     </OptionWrapper>
                     
                 ))
