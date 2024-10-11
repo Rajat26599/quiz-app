@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { questions } from "../../data/questions"
 import { Hr, OptionWrapper, QuestionWrapper } from "./styles"
 

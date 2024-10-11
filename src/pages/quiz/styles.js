@@ -28,11 +28,6 @@ export const Card = styled.div`
         width: 100vw;
     }
 `
-export const SubmitButton = styled.button`
-    padding: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-`
 export const Progress = styled.progress`
     width: 100%;
     margin-bottom: -5px;

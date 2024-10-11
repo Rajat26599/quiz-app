@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Question from "../../components/question/Question"
 import { questions } from "../../data/questions"
-import { Card, CardWrapper, Progress, QuizWrapper, SubmitButton } from "./styles"
+import { Card, CardWrapper, Progress, QuizWrapper } from "./styles"
 import Result from "../../components/result/Result"
 import Button from "../../components/button/Button"
 
