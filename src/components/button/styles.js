@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { globalStyles } from "../../util/globalStyles";
 
 export const ButtonText = styled.span`
     display: inline-block;
@@ -18,7 +17,7 @@ export const Animated = styled.button`
     border-radius: 8px;
     cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
     transition: all 0.3s ease;
-    background-color: ${props => props.disabled ? globalStyles.colors.primary : '#ff8ca0'};
+    background-color: ${props => props.disabled ? '#ccc' : '#50c469'};
     color: white;
     overflow: hidden;
     position: relative;

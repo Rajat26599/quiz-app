@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import Question from "../../components/question/Question"
 import { questions } from "../../data/questions"
-import { Card, CardWrapper, Progress, QuizWrapper } from "./styles"
+import { Card, CardWrapper, Image, Progress, QuizWrapper } from "./styles"
 import Result from "../../components/result/Result"
 import Button from "../../components/button/Button"
+import HeroImg from '../../assets/img/hero.jpg'
 
 const Quiz = () => {
     const [ currentQuestion, setCurrentQuestion ] = useState(0)
@@ -54,7 +55,7 @@ const Quiz = () => {
                         hasBegun ?
                             showResult ?
                                 <>
-                                    <Result resultArr={resultArr} /><br />
+                                    <Result resultArr={resultArr} /><br aria-hidden={true} />
                                     <Button onClick={onDone}>Done</Button>
                                 </>
                             :
@@ -65,7 +66,7 @@ const Quiz = () => {
                                         setCheckedRadio={setCheckedRadio} 
                                         showAnswer={showAnswer}
                                         />
-                                    <br />
+                                    <br aria-hidden={true} />
                                     {
                                         showAnswer ?
                                             <Button onClick={onNext} disabled={checkedRadio===null}>Next</Button>
@@ -75,7 +76,8 @@ const Quiz = () => {
                                 </>
                         :
                             <>
-                                <h3>Let's see how much you know about Lilly</h3> <br />
+                                <Image src={HeroImg} alt="hero image" />
+                                <h3>Let's see how much you know about Lilly.</h3> <br aria-hidden={true} />
                                 <Button onClick={onStart}>Start</Button>
                             </>
                     }
